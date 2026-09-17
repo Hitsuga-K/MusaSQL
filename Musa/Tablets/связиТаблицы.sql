@@ -1,4 +1,4 @@
-USE DB5
+USE DB6
 GO
 
 CREATE TABLE categories(
@@ -36,6 +36,21 @@ CREATE TABLE products(
 	warehouses_id INT FOREIGN KEY REFERENCES warehouses(id),
 )
 GO
+
+DELETE FROM products;
+DELETE FROM brands;
+DELETE FROM supplies;
+DELETE FROM warehouses;
+DELETE FROM categories;
+GO
+
+DBCC CHECKIDENT ('products', RESSED, 0);
+DBCC CHECKIDENT ('brands', RESSED, 0);
+DBCC CHECKIDENT ('supplies', RESSED, 0);
+DBCC CHECKIDENT ('warehouses', RESSED, 0);
+DBCC CHECKIDENT ('categories', RESSED, 0);
+GO
+
 INSERT INTO categories (name) VALUES
 ('Бред'),
 ('Шизофрения'),
