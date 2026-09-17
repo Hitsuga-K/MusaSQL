@@ -72,10 +72,10 @@ INSERT INTO supplies (name, phone, brands_id) VALUES
 ('Найти.', '88003013154', 3);
 GO
 
-INSERT INTO warehouses (address, supla) VALUES
-('г. Симферополь, ул. Александра Невского, д. 27'),
-('г. Симферополь, пр-кт Кирова, д. 37'),
-('Найти.');
+INSERT INTO warehouses (address, supplies_id) VALUES
+('г. Симферополь, ул. Александра Невского, д. 27', 1),
+('г. Симферополь, пр-кт Кирова, д. 37', 2),
+('Найти.', 3);
 GO
 
 INSERT INTO products (name, price, category_id, brands_id, supplies_id, warehouses_id) VALUES
